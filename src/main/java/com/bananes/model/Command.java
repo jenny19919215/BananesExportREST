@@ -2,6 +2,7 @@ package com.bananes.model;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,8 +10,10 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import com.bananes.model.Destination;
 
+import org.hibernate.annotations.Cascade;
+
+import com.bananes.model.Destination;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity

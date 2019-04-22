@@ -58,7 +58,7 @@ public class DestControllerTest {
     
     @Test
     public void add_DestId_OK() throws JSONException {
-    	assertEquals(1l, mockRepository.count());
+    	assertEquals(1, mockRepository.findAll().size());
 
     }
 

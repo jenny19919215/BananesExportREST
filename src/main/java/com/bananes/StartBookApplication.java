@@ -55,10 +55,7 @@ public class StartBookApplication {
             if(des.isPresent()){
             	Command co = new Command(c.getTime(), 25, des.get());
             	 repository.save(co);     
-            }
-            
-            
-           
+            }   
         };
     }
     

@@ -11,5 +11,8 @@ import com.bananes.model.Destination;
 
 public interface CommandRepository extends JpaRepository<Command, Long> {
 	
+	@Query("SELECT c FROM Command c JOIN FETCH c.dest d WHERE d.id = :id")
+	List<Command> findCommandbyDest(@Param("id")Long id);
+	
 	
 }
