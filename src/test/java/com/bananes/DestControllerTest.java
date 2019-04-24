@@ -54,14 +54,5 @@ public class DestControllerTest {
         ResponseEntity<String> response = restTemplate.postForEntity("/destinations", dest, String.class);
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
     }
-    
-    
-    @Test
-    public void add_DestId_OK() throws JSONException {
-    	assertEquals(1, mockRepository.findAll().size());
-
-    }
-
-   
 
 }

@@ -1,4 +1,4 @@
-package com.mkyong.error;
+package com.bananes.error;
 
 public class QuantityIlegalException extends RuntimeException {
 
