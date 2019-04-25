@@ -1,11 +1,8 @@
 package com.bananes.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 import javax.validation.constraints.NotNull;
 
 
@@ -139,5 +136,16 @@ public class Destination {
 		return true;
 	}
 	
+//	 @Override
+//	 public String toString() {
+//	      return "Destination{" +
+//	                "id=" + id +
+//	                ", name='" + name + '\'' +
+//	                ", address='" + address + '\'' +
+//	                ", postCode=" + postCode +
+//                    ", city='" + city + '\'' + 
+//                     ", country='" + country + '\'' + 
+//	                '}';
+//	    }
 
 }

@@ -1,7 +1,6 @@
 package com.bananes;
 
 import java.util.List;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +27,8 @@ public class DestService {
 		} else
 			return dest;
 	}
+	
+	
 
 	@Transactional
 	public List<Destination> findAll() {
