@@ -24,7 +24,7 @@ public class Command {
 	 @JsonFormat(timezone="GMT+2", pattern="yyyy-MM-dd")
 	 @NotNull(message = "Please provide a deliver date.")
 	 Date deliverDate;
-	 @NotNull
+	 @NotNull(message = "Please provide a quantity.")
 	 @Min(value = 1, message = "Quantity should not be less than 1")
 	 @Max(value = 10000, message = "Quantity should not be greater than 10000")
 	 Integer quantity;
