@@ -22,14 +22,14 @@ public class Command {
 	 @GeneratedValue
 	 private Long id;
 	 @JsonFormat(timezone="GMT+2", pattern="yyyy-MM-dd")
-	 @NotNull
+	 @NotNull(message = "Please provide a deliver date.")
 	 Date deliverDate;
 	 @NotNull
 	 @Min(value = 1, message = "Quantity should not be less than 1")
 	 @Max(value = 10000, message = "Quantity should not be greater than 10000")
 	 Integer quantity;
 	 Float price;
-	 @NotNull
+	 @NotNull(message = "Please provide a destination.")
 	 @ManyToOne
 	 Destination dest;
 

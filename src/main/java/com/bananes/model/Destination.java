@@ -1,8 +1,11 @@
 package com.bananes.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.validation.constraints.NotNull;
 
 
@@ -12,15 +15,15 @@ public class Destination {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@NotNull
+	@NotNull(message = "Please provide a name.")
 	private String name;
-	@NotNull
+	@NotNull(message = "Please provide an address.")
 	private String address;
-	@NotNull
+	@NotNull(message = "Please provide a post code.")
 	private Integer postCode;
-	@NotNull
+	@NotNull(message = "Please provide a city.")
 	private String city;
-	@NotNull
+	@NotNull(message = "Please provide a country.")
 	private String country;
 	
 	// avoid this "No default constructor for entity"
@@ -136,16 +139,5 @@ public class Destination {
 		return true;
 	}
 	
-//	 @Override
-//	 public String toString() {
-//	      return "Destination{" +
-//	                "id=" + id +
-//	                ", name='" + name + '\'' +
-//	                ", address='" + address + '\'' +
-//	                ", postCode=" + postCode +
-//                    ", city='" + city + '\'' + 
-//                     ", country='" + country + '\'' + 
-//	                '}';
-//	    }
 
 }
